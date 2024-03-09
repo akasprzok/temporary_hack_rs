@@ -1843,6 +1843,7 @@ dependencies = [
  "reqwest",
  "rocket",
  "rocket_dyn_templates",
+ "serde",
  "tokio",
 ]
 
