@@ -1,4 +1,3 @@
-
 use rocket::serde::Serialize;
 
 #[derive(Serialize)]
@@ -10,7 +9,7 @@ pub struct Greeting {
 impl Greeting {
     pub fn new() -> Greeting {
         Greeting {
-            text: Self::default_greeting()
+            text: Self::default_greeting(),
         }
     }
     fn default_greeting() -> &'static str {

@@ -11,7 +11,6 @@ mod github;
 mod greetings;
 
 use greetings::Greeting;
-use rocket_dyn_templates::{context, Template};
 
 use crate::github::GitHubClient;
 
@@ -22,15 +21,8 @@ fn index_json() -> Json<Greeting> {
 }
 
 #[get("/", rank = 1)]
-fn index() -> Template {
-    Template::render(
-        "index",
-        context! {
-            title: "hello",
-            name: Some("Chris"),
-            items: vec!["one"]
-        },
-    )
+fn index() -> String {
+    String::from("heello")
 }
 
 #[get("/hello/<name>")]
@@ -55,7 +47,6 @@ async fn main() -> Result<(), Box<dyn Error>> {
     rocket::build()
         .register("/", catchers![not_found])
         .mount("/", routes![index, index_json, hello, repos])
-        .attach(Template::fairing())
         .manage(github_client)
         .launch()
         .await?;
