@@ -1,0 +1,14 @@
+version: 2
+updates:
+- package-ecosystem: cargo
+  directory: "/temporary_hack"
+  schedule:
+    interval: weekly
+    time: "12:00"
+  open-pull-requests-limit: 10
+- package-ecosystem: cargo
+  directory: "/temporary_hack_web"
+  schedule:
+    interval: weekly
+    time: "12:00"
+  open-pull-requests-limit: 10
