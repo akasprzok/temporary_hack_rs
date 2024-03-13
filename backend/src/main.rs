@@ -3,7 +3,8 @@ extern crate rocket;
 
 use std::error::Error;
 
-use github::Repo;
+use common::model::repo::Repo;
+
 use rocket::response::status;
 use rocket::{serde::json::Json, Request, State};
 

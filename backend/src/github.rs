@@ -1,5 +1,7 @@
 use reqwest::{header, Client};
 
+use common::model::repo::Repo;
+
 pub struct GitHubClient {
     client: Client,
     username: String,
