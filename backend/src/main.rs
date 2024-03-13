@@ -1,6 +1,8 @@
 #[macro_use]
 extern crate rocket;
 
+use cors::*;
+
 use std::error::Error;
 
 use common::model::repo::Repo;
@@ -8,6 +10,7 @@ use common::model::repo::Repo;
 use rocket::response::status;
 use rocket::{serde::json::Json, Request, State};
 
+mod cors;
 mod github;
 mod greetings;
 
@@ -39,6 +42,7 @@ async fn main() -> Result<(), Box<dyn Error>> {
         .register("/", catchers![not_found])
         .mount("/", routes![index, repos])
         .manage(github_client)
+        .attach(CORS)
         .launch()
         .await?;
 

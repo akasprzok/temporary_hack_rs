@@ -3,8 +3,8 @@ use yew::prelude::*;
 
 mod components;
 mod controllers;
-mod models;
 mod state;
+mod temporary_hack_api;
 
 use components::*;
 use controllers::*;
@@ -17,20 +17,17 @@ fn app() -> Html {
 
     {
         let repos_controller = repos_controller.clone();
-        use_effect_with(
-            move |_| {
-                repos_controller.init_repos();
-                || ()
-            },
-            (),
-        );
+        use_effect_with((), move |_| {
+            repos_controller.init_repos();
+            || ()
+        });
     }
 
     html! {
         <>
-        <h1>{ "RustConf Explorer" }</h1>
+        <h1>{ "Repos" }</h1>
         <div>
-           <RepoList repos={ repos } />
+           <RepoList repos={ repos.repos.clone() } />
         </div>
     </>
     }

@@ -1,19 +1,19 @@
 use serde::{Deserialize, Serialize};
 
 #[derive(Serialize, Deserialize, Clone, PartialEq)]
-struct License {
-    spdx_id: String,
-    name: String,
+pub struct License {
+    pub spdx_id: String,
+    pub name: String,
 }
 
 #[derive(Serialize, Deserialize, Clone, PartialEq)]
 pub struct Repo {
-    name: String,
-    html_url: String,
-    fork: bool,
-    stargazers_count: u16,
-    watchers_count: u16,
-    language: Option<String>,
-    license: Option<License>,
-    topics: Vec<String>,
+    pub name: String,
+    pub html_url: String,
+    pub fork: bool,
+    pub stargazers_count: u16,
+    pub watchers_count: u16,
+    pub language: Option<String>,
+    pub license: Option<License>,
+    pub topics: Vec<String>,
 }

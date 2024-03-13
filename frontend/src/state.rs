@@ -1,6 +1,7 @@
-use yew::Reducible;
+use std::rc::Rc;
 
-use crate::models::Repo;
+use common::model::repo::Repo;
+use yew::Reducible;
 
 pub enum RepoAction {
     Set(Vec<Repo>),
