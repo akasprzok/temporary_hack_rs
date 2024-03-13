@@ -1,6 +1,5 @@
 {
     "rust-analyzer.linkedProjects": [
-        "./temporary_hack/Cargo.toml",
-        "./temporary_hack_web/Cargo.toml"
+        "./Cargo.toml",
     ]
 }

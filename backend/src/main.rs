@@ -14,20 +14,10 @@ use greetings::Greeting;
 
 use crate::github::GitHubClient;
 
-#[get("/", format = "json")]
-fn index_json() -> Json<Greeting> {
+#[get("/")]
+fn index() -> Json<Greeting> {
     let greeting = Greeting::new();
     Json(greeting)
-}
-
-#[get("/", rank = 1)]
-fn index() -> String {
-    String::from("heello")
-}
-
-#[get("/hello/<name>")]
-fn hello(name: &str) -> String {
-    format!("Hello, {}!", name)
 }
 
 #[get("/repos")]
@@ -46,7 +36,7 @@ async fn main() -> Result<(), Box<dyn Error>> {
 
     rocket::build()
         .register("/", catchers![not_found])
-        .mount("/", routes![index, index_json, hello, repos])
+        .mount("/", routes![index, repos])
         .manage(github_client)
         .launch()
         .await?;

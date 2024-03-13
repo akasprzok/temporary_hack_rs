@@ -44,17 +44,21 @@ impl GitHubClient {
 
         Ok(GitHubClient {
             client,
-            username: username.into(),
-            password: password.into(),
+            username,
+            password,
         })
     }
 
     pub async fn repos(&self) -> Result<Vec<Repo>, reqwest::Error> {
-        self.client
+        let response = self.client
             .get("https://api.github.com/user/repos")
             .basic_auth(&self.username, Some(&self.password))
             .send()
-            .await?
+            .await?;
+
+        println!("{:?}", &response.headers());
+
+        response
             .json::<Vec<Repo>>()
             .await
     }
