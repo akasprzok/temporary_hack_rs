@@ -1,16 +1,14 @@
 use std::rc::Rc;
 use yew::prelude::*;
 
-
-mod controllers;
-mod state;
-mod models;
 mod components;
+mod controllers;
+mod models;
+mod state;
 
+use components::*;
 use controllers::*;
 use state::*;
-use components::*;
-
 
 #[function_component(App)]
 fn app() -> Html {
@@ -27,7 +25,6 @@ fn app() -> Html {
             (),
         );
     }
-
 
     html! {
         <>

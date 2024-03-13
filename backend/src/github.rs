@@ -1,24 +1,4 @@
-use serde::{Deserialize, Serialize};
-
 use reqwest::{header, Client};
-
-#[derive(Serialize, Deserialize)]
-struct License {
-    spdx_id: String,
-    name: String,
-}
-
-#[derive(Serialize, Deserialize)]
-pub struct Repo {
-    name: String,
-    html_url: String,
-    fork: bool,
-    stargazers_count: u16,
-    watchers_count: u16,
-    language: Option<String>,
-    license: Option<License>,
-    topics: Vec<String>,
-}
 
 pub struct GitHubClient {
     client: Client,
@@ -50,7 +30,8 @@ impl GitHubClient {
     }
 
     pub async fn repos(&self) -> Result<Vec<Repo>, reqwest::Error> {
-        let response = self.client
+        let response = self
+            .client
             .get("https://api.github.com/user/repos")
             .basic_auth(&self.username, Some(&self.password))
             .send()
@@ -58,8 +39,6 @@ impl GitHubClient {
 
         println!("{:?}", &response.headers());
 
-        response
-            .json::<Vec<Repo>>()
-            .await
+        response.json::<Vec<Repo>>().await
     }
 }

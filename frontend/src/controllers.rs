@@ -1,12 +1,12 @@
 use yew::UseReducerHandle;
 
 pub struct RepoController {
-    state: UseReducerHandle<RepoState>
+    state: UseReducerHandle<RepoState>,
 }
 
 impl RepoController {
     pub fn new(state: UseReducerHandle<RepoState>) -> RepoController {
-        RepoController {State}
+        RepoController { State }
     }
 
     pub fn init_repos(&self) {

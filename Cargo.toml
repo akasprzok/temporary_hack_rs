@@ -1,3 +1,8 @@
+[package]
+name = "temporary_hack"
+version = "0.1.0"
+edition = "2021"
+
 [workspace]
-members = ["frontend", "backend"]
+members = ["frontend", "backend", "common"]
 default-members = ["backend"]
