@@ -1,13 +1,25 @@
 version: 2
 updates:
 - package-ecosystem: cargo
-  directory: "/temporary_hack"
+  directory: "/"
   schedule:
     interval: weekly
     time: "12:00"
   open-pull-requests-limit: 10
 - package-ecosystem: cargo
-  directory: "/temporary_hack_web"
+  directory: "/backend"
+  schedule:
+    interval: weekly
+    time: "12:00"
+  open-pull-requests-limit: 10
+- package-ecosystem: cargo
+  directory: "/frontend"
+  schedule:
+    interval: weekly
+    time: "12:00"
+  open-pull-requests-limit: 10
+- package-ecosystem: cargo
+  directory: "/common"
   schedule:
     interval: weekly
     time: "12:00"
