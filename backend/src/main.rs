@@ -1,55 +1,71 @@
-#[macro_use]
-extern crate rocket;
+use std::sync::Arc;
+use std::time::Duration;
 
-use cors::*;
-
-use std::error::Error;
-
+use axum::error_handling::HandleErrorLayer;
+use axum::extract::State;
+use axum::http::StatusCode;
+use axum::response::Json;
+use axum::routing::get;
+use axum::Router;
 use common::model::repo::Repo;
+use tower::{BoxError, ServiceBuilder};
+use tower_http::trace::TraceLayer;
+use tracing_subscriber::layer::SubscriberExt;
+use tracing_subscriber::util::SubscriberInitExt;
 
-use rocket::response::status;
-use rocket::{serde::json::Json, Request, State};
-
-mod cors;
 mod github;
-mod greetings;
-
-use greetings::Greeting;
 
 use crate::github::GitHubClient;
 
-#[get("/")]
-fn index() -> Json<Greeting> {
-    let greeting = Greeting::new();
-    Json(greeting)
-}
+type GitHubClientState = Arc<GitHubClient>;
 
-#[get("/repos")]
 async fn repos(
-    github_client: &State<GitHubClient>,
-) -> Result<Json<Vec<Repo>>, status::NotFound<String>> {
-    match github_client.repos().await {
-        Ok(repos) => Ok(Json(repos)),
-        Err(e) => Err(status::NotFound(e.to_string())),
-    }
+    State(client): State<GitHubClientState>,
+) -> Result<Json<Vec<Repo>>, (StatusCode, String)> {
+    let result = client
+        .repos()
+        .await
+        .map_err(|e| (StatusCode::NOT_FOUND, e.to_string()))?;
+    Ok(Json(result))
 }
 
-#[rocket::main]
-async fn main() -> Result<(), Box<dyn Error>> {
-    let github_client = github::GitHubClient::new()?;
+#[tokio::main]
+async fn main() {
+    let github_client = github::GitHubClient::new().unwrap();
+    let client_state = Arc::new(github_client);
 
-    rocket::build()
-        .register("/", catchers![not_found])
-        .mount("/", routes![index, repos])
-        .manage(github_client)
-        .attach(CORS)
-        .launch()
-        .await?;
+    tracing_subscriber::registry()
+        .with(
+            tracing_subscriber::EnvFilter::try_from_default_env()
+                .unwrap_or_else(|_| "backend=debug,tower_http=debug".into()),
+        )
+        .with(tracing_subscriber::fmt::layer())
+        .init();
 
-    Ok(())
-}
+    let app = Router::new()
+        .route("/repos", get(repos))
+        // Add middleware to all routes
+        .layer(
+            ServiceBuilder::new()
+                .layer(HandleErrorLayer::new(|error: BoxError| async move {
+                    if error.is::<tower::timeout::error::Elapsed>() {
+                        Ok(StatusCode::REQUEST_TIMEOUT)
+                    } else {
+                        Err((
+                            StatusCode::INTERNAL_SERVER_ERROR,
+                            format!("Unhandled internal error: {error}"),
+                        ))
+                    }
+                }))
+                .timeout(Duration::from_secs(10))
+                .layer(TraceLayer::new_for_http())
+                .into_inner(),
+        )
+        .with_state(client_state);
 
-#[catch(404)]
-fn not_found(req: &Request) -> String {
-    format!("Woops, couldn't find '{}", req.uri())
+    let listener = tokio::net::TcpListener::bind("127.0.0.1:3000")
+        .await
+        .unwrap();
+    tracing::debug!("listening on {}", listener.local_addr().unwrap());
+    axum::serve(listener, app).await.unwrap();
 }
