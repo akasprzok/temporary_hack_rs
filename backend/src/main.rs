@@ -1,13 +1,13 @@
-use std::error::Error;
-use std::sync::{Arc, RwLock};
+use std::sync::Arc;
 use std::time::Duration;
 
 use axum::error_handling::HandleErrorLayer;
-use axum::extract::{Query, State};
-use axum::http::{status, StatusCode};
-use axum::response::IntoResponse;
+use axum::extract::State;
+use axum::http::StatusCode;
+use axum::response::Json;
 use axum::routing::get;
-use axum::{Json, Router};
+use axum::Router;
+use common::model::repo::Repo;
 use tower::{BoxError, ServiceBuilder};
 use tower_http::trace::TraceLayer;
 use tracing_subscriber::layer::SubscriberExt;
@@ -17,19 +17,22 @@ mod github;
 
 use crate::github::GitHubClient;
 
-type GitHubClientState = Arc<RwLock<GitHubClient>>;
+type GitHubClientState = Arc<GitHubClient>;
 
-async fn repos(State(client): State<GitHubClientState>) -> Result<impl IntoResponse, StatusCode> {
-    match client.write().unwrap().repos().await {
-        Ok(repos) => Ok(Json(repos)),
-        Err(_) => Err(StatusCode::NOT_FOUND),
-    }
+async fn repos(
+    State(client): State<GitHubClientState>,
+) -> Result<Json<Vec<Repo>>, (StatusCode, String)> {
+    let result = client
+        .repos()
+        .await
+        .map_err(|e| (StatusCode::NOT_FOUND, e.to_string()))?;
+    Ok(Json(result))
 }
 
 #[tokio::main]
 async fn main() {
     let github_client = github::GitHubClient::new().unwrap();
-    let client_state = Arc::new(RwLock::new(github_client));
+    let client_state = Arc::new(github_client);
 
     tracing_subscriber::registry()
         .with(
