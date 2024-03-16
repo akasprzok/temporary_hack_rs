@@ -9,4 +9,4 @@ edition = "2021"
 common = { path = "../common"}
 wasm-bindgen-futures = "0.4"
 yew = { version = "0.21", features =  ["csr"] }
-reqwasm = "0.2"
+reqwasm = "0.5"
