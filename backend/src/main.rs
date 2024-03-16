@@ -3,13 +3,15 @@ use std::time::Duration;
 
 use axum::error_handling::HandleErrorLayer;
 use axum::extract::State;
-use axum::http::StatusCode;
+use axum::http::{self, HeaderValue, Method, StatusCode};
 use axum::response::Json;
 use axum::routing::get;
 use axum::Router;
 use common::model::repo::Repo;
 use tower::{BoxError, ServiceBuilder};
+use tower_http::cors::CorsLayer;
 use tower_http::trace::TraceLayer;
+
 use tracing_subscriber::layer::SubscriberExt;
 use tracing_subscriber::util::SubscriberInitExt;
 
@@ -59,11 +61,17 @@ async fn main() {
                 }))
                 .timeout(Duration::from_secs(10))
                 .layer(TraceLayer::new_for_http())
+                .layer(
+                    CorsLayer::new()
+                        .allow_origin("http://127.0.0.1:8080".parse::<HeaderValue>().unwrap())
+                        .allow_methods([Method::GET])
+                        .allow_headers([http::header::CONTENT_TYPE]),
+                )
                 .into_inner(),
         )
         .with_state(client_state);
 
-    let listener = tokio::net::TcpListener::bind("127.0.0.1:3000")
+    let listener = tokio::net::TcpListener::bind("127.0.0.1:8000")
         .await
         .unwrap();
     tracing::debug!("listening on {}", listener.local_addr().unwrap());
