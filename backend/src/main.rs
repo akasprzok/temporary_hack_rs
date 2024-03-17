@@ -10,6 +10,7 @@ use axum::Router;
 use common::model::repo::Repo;
 use tower::{BoxError, ServiceBuilder};
 use tower_http::cors::CorsLayer;
+use tower_http::services::ServeFile;
 use tower_http::trace::TraceLayer;
 
 use tracing_subscriber::layer::SubscriberExt;
@@ -46,6 +47,7 @@ async fn main() {
 
     let app = Router::new()
         .route("/repos", get(repos))
+        .route_service("/resume", ServeFile::new("assets/resume.json"))
         // Add middleware to all routes
         .layer(
             ServiceBuilder::new()
