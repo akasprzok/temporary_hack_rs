@@ -40,3 +40,12 @@ repos:
     entry: "cargo audit -q"
     language: "system"
     pass_filenames: false
+- repo: https://github.com/python-jsonschema/check-jsonschema
+  rev: 0.17.0
+  hooks:
+    - id: check-github-workflows
+    - id: check-jsonschema
+      name: "Check all definitions are valid JSON Schema"
+      files: ^backend/assets/
+      types: [json]
+      args: ["--check-metaschema"]
