@@ -27,7 +27,7 @@
         "position": "Lead Platform Engineer",
         "startDate": "2022-09",
         "endDate": "2024-03",
-        "summary": "*Amazon.com* is an American multinational technology company based in *Seattle, Washington*, which focuses on e-commerce, cloud computing, digital streaming, and artificial intelligence. The company has been referred to as *one of the most influential economic and cultural forces in the world*, as well as the world's most valuable brand.",
+        "summary": "*Amazon.com* is an multinational technology company based in *Seattle, Washington*, which focuses on e-commerce, cloud computing, digital streaming, and artificial intelligence. The company has been referred to as *one of the most influential economic and cultural forces in the world*, as well as the world's most valuable brand.",
         "highlights": [
         "Key contributor to the core Massdriver platform, enabling the deployment of hundreds of resources every day ranging from Kubernetes clusters to services on all three major clouds using a variety of provisioners",
         "Evangelized Massdriver’s value to customers via webinars and blog posts",
@@ -56,7 +56,7 @@
         "summary": "*Facebook* is an American social media conglomerate corporation based in *Menlo Park, California*. It was founded by **Mark Zuckerberg**, along with his fellow roommates and students at Harvard College, who were Eduardo Saverin, Andrew McCollum, Dustin Moskovitz and Chris Hughes, originally as TheFacebook.com—today's Facebook, a popular global social networking website.",
         "highlights": [
           "Promoted from Software Engineer to Senior Software Engineer based on exceptional performance and ownership of key services",
-          "Developed and operated cloud services that enable all current generation Ford vehicles to perform gigabyte-sized OTA updates, send hundreds of megabytes of telemetry per day, and execute commands remotely",
+          "Developed and operated cloud services that enable all current generation Ford vehicles to perform gigabyte-sized OTA updates, send hundreds of megabytes of telemetry per day, and execute commands remotely"
         ]
       },
       {
@@ -121,7 +121,7 @@
         "name": "An ant-inspired model for multi-agent interaction networks without stigmergy",
         "publisher": "Springer Swarm Intelligence",
         "releaseDate": "2017-11-13",
-        "url": "https://link.springer.com/epdf/10.1007/s11721-017-0147-4?author_access_token=Yq3Igpf5Jzr6E6zM6x4FGve4RwlQNchNByi7wbcMAY5mCgzjaXtPzkevknds0UBZVHwICGHsKaPhfA2DgMnw2vjpwQxP3zU7mKgQZtKYTrnscLgSh_6XmRCEY0SqnFyekBhuP34ZHy-tI4BFdSif3w==",
+        "url": "https://link.springer.com/epdf/10.1007/s11721-017-0147-4?author_access_token=Yq3Igpf5Jzr6E6zM6x4FGve4RwlQNchNByi7wbcMAY5mCgzjaXtPzkevknds0UBZVHwICGHsKaPhfA2DgMnw2vjpwQxP3zU7mKgQZtKYTrnscLgSh_6XmRCEY0SqnFyekBhuP34ZHy-tI4BFdSif3w=="
       },
       {
         "name": "Dash Designer: A Multi-Modal Design Tool for Vehicle Interactivity",
