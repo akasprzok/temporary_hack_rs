@@ -1,0 +1,285 @@
+{
+    "$schema": "https://raw.githubusercontent.com/jsonresume/resume-schema/master/schema.json",
+    "basics": {
+      "name": "Andreas Kasprzok",
+      "label": "Software Engineer",
+      "email": "akasprzok@mail.com",
+      "url": "https://www.temporaryhack.com",
+      "summary": "Polyglot technologist excited about building scalable, resilient and available services and infrastructure. Highly autonomous and outcome-driven with a passion for observability.",
+      "location": {
+        "city": "Bellingham",
+        "countryCode": "US",
+        "region": "Washington"
+      },
+      "profiles": [
+        {
+          "url": "https://github.com/akasprzok"
+        },
+        {
+          "url": "https://linkedin.com/in/akasprzok"
+        }
+      ]
+    },
+    "work": [
+      {
+        "name": "Autonomic",
+        "location": "Remote, United States",
+        "position": "Senior Software Engineer",
+        "url": "https://www.autonomic.ai/",
+        "startDate": "2017-01",
+        "endDate": "2020-08",
+        "summary": "*Facebook* is an American social media conglomerate corporation based in *Menlo Park, California*. It was founded by **Mark Zuckerberg**, along with his fellow roommates and students at Harvard College, who were Eduardo Saverin, Andrew McCollum, Dustin Moskovitz and Chris Hughes, originally as TheFacebook.com—today's Facebook, a popular global social networking website.",
+        "highlights": [
+          "Promoted from Software Engineer to Senior Software Engineer based on exceptional performance and ownership of key services",
+          "Developed and operated cloud services that enable all current generation Ford vehicles to perform gigabyte-sized OTA updates, send hundreds of megabytes of telemetry per day, and execute commands remotely",
+        ]
+      },
+      {
+        "name": "Amazon",
+        "location": "Washington, United States",
+        "position": "Senior Software Engineer",
+        "url": "https://www.amazon.com/",
+        "startDate": "2013-07-23",
+        "endDate": "2016-11-16",
+        "summary": "*Amazon.com* is an American multinational technology company based in *Seattle, Washington*, which focuses on e-commerce, cloud computing, digital streaming, and artificial intelligence. The company has been referred to as *one of the most influential economic and cultural forces in the world*, as well as the world's most valuable brand.",
+        "highlights": [
+          "Massa id neque aliquam vestibulum morbi",
+          "Consectetur adipiscing elit",
+          "Sed do eiusmod tempor incididunt ut labore",
+          "Mattis vulputate enim nulla aliquet porttitor",
+          "incididunt ut labore et dolore magna aliqua",
+          "Lacus luctus accumsan tortor"
+        ]
+      },
+      {
+        "name": "Netflix",
+        "location": "California, United States",
+        "position": "Junior Software Engineer",
+        "url": "https://www.netflix.com/",
+        "startDate": "2010-02-14",
+        "endDate": "2013-07-22",
+        "summary": "*Netflix* is an American over-the-top content platform and production company headquartered in *Los Gatos, California*. Netflix was founded in 1997 by **Reed Hastings** and **Marc Randolph** in *Scotts Valley, California*. The company's primary business is a subscription-based streaming service offering online streaming from a library of films and television series, including those produced in-house.",
+        "highlights": [
+          "Posuere sollicitudin aliquam ultrices",
+          "Porttitor rhoncus dolor purus",
+          "Aliquam sem et tortor consequat",
+          "Pellentesque dignissim enim sit",
+          "Hendrerit dolor magna eget est"
+        ]
+      },
+      {
+        "name": "Google",
+        "location": "California, United States",
+        "position": "Software Engineer Intern",
+        "url": "https://www.google.com/",
+        "startDate": "2009-09-13",
+        "endDate": "2010-02-13",
+        "summary": "*Google* is an American multinational technology company that specializes in Internet-related services and products, which include online advertising technologies, a search engine, cloud computing, software, and hardware. It is considered one of the Big Five technology companies in the U.S. information technology industry, alongside Amazon, Facebook, Apple, and Microsoft.",
+        "highlights": [
+          "Ut pharetra sit amet aliquam id diam",
+          "Vitae congue eu consequat ac",
+          "Cursus sit amet dictum sit amet"
+        ]
+      }
+    ],
+    "volunteer": [
+      {
+        "organization": "Animal Refuge",
+        "position": "Supervisor",
+        "url": "https://example.com/",
+        "startDate": "2012-10-11",
+        "endDate": "2014-12-24",
+        "summary": "Nulla sit amet velit ac turpis interdum consectetur eget vitae ante. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Etiam pharetra diam et tortor bibendum laoreet.",
+        "highlights": [
+          "Maecenas at dictum sem",
+          "Ut ac ex ac ipsum commodo",
+          "Pellentesque vitae sed dolor",
+          "Aliquam ut lectus ac lacus ultrices"
+        ]
+      },
+      {
+        "organization": "Red cross",
+        "position": "Math professor",
+        "url": "https://example.com/",
+        "startDate": "2011-01-16",
+        "endDate": "2012-10-10",
+        "summary": "Proin id justo pulvinar, imperdiet eros ac, iaculis nunc. Donec dignissim leo volutpat, cursus arcu vel, dapibus risus. Nam ut volutpat est. In fringilla commodo pretium. Vestibulum efficitur pellentesque ex. Nulla dictum, mauris sit amet mattis pharetra, purus ipsum commodo ex, a molestie metus augue sit amet justo."
+      }
+    ],
+    "education": [
+      {
+        "institution": "University of Stanford",
+        "url": "https://www.stanford.edu/",
+        "area": "Computer Science",
+        "studyType": "Master"
+      },
+      {
+        "institution": "University of Oklahoma",
+        "url": "https://www.ou.edu/",
+        "area": "Information Technology",
+        "studyType": "Bachelor"
+      }
+    ],
+    "awards": [
+      {
+        "title": "Website of the day",
+        "awarder": "Awwward",
+        "summary": "Received for my website [domain.com](domain.com)"
+      },
+      {
+        "title": "Java Champion",
+        "awarder": "Oracle",
+        "summary": "Obtained thanks to my contributions \n\n to the Java community."
+      }
+    ],
+    "certificates": [
+      {
+        "name": "AWS Certified Solutions\n\nArchitect - Professional",
+        "issuer": "Amazon Web Services",
+        "url": "https://www.your-badge.com"
+      },
+      {
+        "name": "Oracle Certified Professional\n\nJava SE 17 Developer",
+        "issuer": "Oracle",
+        "url": "https://www.your-badge.com"
+      },
+      {
+        "name": "CCNA Routing and Switching",
+        "issuer": "Cisco",
+        "url": "https://www.your-badge.com"
+      }
+    ],
+    "publications": [
+      {
+        "name": "Chasing the Higgs Boson",
+        "publisher": "The New York Times",
+        "releaseDate": "2013-03-04",
+        "url": "https://www.nytimes.com/",
+        "summary": "Integer luctus erat at sapien pharetra, nec elementum diam euismod. Maecenas condimentum eu nisi ut aliquet. Donec vitae ultricies risus. Donec commodo justo at odio cursus, nec mattis tellus dignissim."
+      },
+      {
+        "name": "Clean Code: A Handbook of Agile Software Craftsmanship",
+        "publisher": "Pearson",
+        "releaseDate": "2008-08-01",
+        "summary": "Morbi lobortis sodales nisi, et vulputate diam posuere vitae. Phasellus sollicitudin vehicula justo vel tincidunt. Donec faucibus magna ut sollicitudin tincidunt. Etiam sodales neque eu mollis egestas. Nam nisl nulla, iaculis sit amet condimentum quis, iaculis ut ex. Donec gravida efficitur ligula, ac auctor magna efficitur vel."
+      }
+    ],
+    "skills": [
+      {
+        "name": "Languages",
+        "keywords": [
+          "Java",
+          "Python",
+          "Javascript",
+          "Rust",
+          "Golang"
+        ]
+      },
+      {
+        "name": "Frameworks",
+        "keywords": [
+          "Spring",
+          "Django",
+          "Express"
+        ]
+      },
+      {
+        "name": "Tools",
+        "keywords": [
+          "VS Code",
+          "Intellij IDEA"
+        ]
+      },
+      {
+        "name": "Technologies",
+        "keywords": [
+          "Docker",
+          "AWS"
+        ]
+      },
+      {
+        "name": "Other",
+        "keywords": [
+          "Open source",
+          "XP"
+        ]
+      }
+    ],
+    "languages": [
+      {
+        "language": "English",
+        "fluency": "Native"
+      },
+      {
+        "language": "Russian",
+        "fluency": "Professional"
+      }
+    ],
+    "interests": [
+      {
+        "name": "Pixelart"
+      },
+      {
+        "name": "Open Source"
+      },
+      {
+        "name": "Gardening"
+      },
+      {
+        "name": "Writing"
+      }
+    ],
+    "references": [
+      {
+        "name": "Robert C. Martin",
+        "reference": "Suspendisse a tristique massa. Curabitur sollicitudin volutpat urna, sed pretium justo tincidunt non."
+      },
+      {
+        "name": "Martin Fowler",
+        "reference": "Integer luctus erat at sapien pharetra, nec elementum diam euismod. Maecenas condimentum eu nisi ut aliquet. Donec vitae ultricies risus. Donec commodo justo at odio cursus, nec mattis tellus dignissim."
+      },
+      {
+        "name": "Elon Musk",
+        "reference": "Sed pretium urna orci, at mollis ante fermentum at. Donec sagittis risus hendrerit venenatis consequat."
+      }
+    ],
+    "projects": [
+      {
+        "name": "Deno",
+        "description": "*Deno* is a runtime for JavaScript and TypeScript that is based on the V8 JavaScript engine and the Rust programming language. It was created by **Ryan Dahl**, original creator of Node.js, and is focused on productivity. It was announced by Dahl in 2018 during his talk \"*10 Things I Regret About Node.js*\".",
+        "highlights": [
+          "Vitae tempus quam pellentesque",
+          "Dui accumsan sit amet nulla",
+          "Ultrices vitae auctor eu augue",
+          "Scelerisque felis imperdiet",
+          "Pellentesque dignissim enim sit"
+        ],
+        "startDate": "2018-05-13",
+        "url": "https://deno.land/",
+        "roles": [
+          "creator"
+        ]
+      },
+      {
+        "name": "Node.js",
+        "description": "*Node.js* is an open-source, cross-platform, back-end JavaScript runtime environment that executes JavaScript code outside a web browser.",
+        "highlights": [
+          "Commodo elit at imperdiet dui",
+          "Id volutpat lacus laoreet non",
+          "Accumsan lacus vel facilisis"
+        ],
+        "startDate": "2011-08-26",
+        "endDate": "2018-05-12",
+        "url": "https://nodejs.org/",
+        "roles": [
+          "contributor",
+          "evangelist"
+        ]
+      }
+    ],
+    "meta": {
+      "canonical": "https://raw.githubusercontent.com/jsonresume/resume-schema/master/resume.json",
+      "version": "v1.0.0",
+      "lastModified": "2017-12-24T15:53:00"
+    }
+  }
