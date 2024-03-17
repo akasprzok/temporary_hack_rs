@@ -22,6 +22,31 @@
     },
     "work": [
       {
+        "name": "Massdriver",
+        "location": "Remote, United States",
+        "position": "Lead Platform Engineer",
+        "startDate": "2022-09",
+        "endDate": "2024-03",
+        "summary": "*Amazon.com* is an American multinational technology company based in *Seattle, Washington*, which focuses on e-commerce, cloud computing, digital streaming, and artificial intelligence. The company has been referred to as *one of the most influential economic and cultural forces in the world*, as well as the world's most valuable brand.",
+        "highlights": [
+        "Key contributor to the core Massdriver platform, enabling the deployment of hundreds of resources every day ranging from Kubernetes clusters to services on all three major clouds using a variety of provisioners",
+        "Evangelized Massdriver’s value to customers via webinars and blog posts",
+        "Spearheaded the development of Massdriver’s metrics product, scraping over 50 million metrics from AWS, Azure, and GCP"
+        ]
+      },
+      {
+        "name": "BlockFi",
+        "location": "Remote, United States",
+        "position": "Tech Lead, Observability",
+        "startDate": "2020-08",
+        "endDate": "2022-08",
+        "summary": "*Amazon.com* is an American multinational technology company based in *Seattle, Washington*, which focuses on e-commerce, cloud computing, digital streaming, and artificial intelligence. The company has been referred to as *one of the most influential economic and cultural forces in the world*, as well as the world's most valuable brand.",
+        "highlights": [
+          "Promoted from Senior Engineer to Tech Lead after demonstrating ability to cut through team silos to horizontally align the engineering organization around reliability and availability goals for the platform",
+          "Built a team and observability stack that watched over billions of dollars in crypto deposits and served a 500-strong engineering org across 3 continents"
+        ]
+      },
+      {
         "name": "Autonomic",
         "location": "Remote, United States",
         "position": "Senior Software Engineer",
@@ -32,39 +57,6 @@
         "highlights": [
           "Promoted from Software Engineer to Senior Software Engineer based on exceptional performance and ownership of key services",
           "Developed and operated cloud services that enable all current generation Ford vehicles to perform gigabyte-sized OTA updates, send hundreds of megabytes of telemetry per day, and execute commands remotely",
-        ]
-      },
-      {
-        "name": "Amazon",
-        "location": "Washington, United States",
-        "position": "Senior Software Engineer",
-        "url": "https://www.amazon.com/",
-        "startDate": "2013-07-23",
-        "endDate": "2016-11-16",
-        "summary": "*Amazon.com* is an American multinational technology company based in *Seattle, Washington*, which focuses on e-commerce, cloud computing, digital streaming, and artificial intelligence. The company has been referred to as *one of the most influential economic and cultural forces in the world*, as well as the world's most valuable brand.",
-        "highlights": [
-          "Massa id neque aliquam vestibulum morbi",
-          "Consectetur adipiscing elit",
-          "Sed do eiusmod tempor incididunt ut labore",
-          "Mattis vulputate enim nulla aliquet porttitor",
-          "incididunt ut labore et dolore magna aliqua",
-          "Lacus luctus accumsan tortor"
-        ]
-      },
-      {
-        "name": "Netflix",
-        "location": "California, United States",
-        "position": "Junior Software Engineer",
-        "url": "https://www.netflix.com/",
-        "startDate": "2010-02-14",
-        "endDate": "2013-07-22",
-        "summary": "*Netflix* is an American over-the-top content platform and production company headquartered in *Los Gatos, California*. Netflix was founded in 1997 by **Reed Hastings** and **Marc Randolph** in *Scotts Valley, California*. The company's primary business is a subscription-based streaming service offering online streaming from a library of films and television series, including those produced in-house.",
-        "highlights": [
-          "Posuere sollicitudin aliquam ultrices",
-          "Porttitor rhoncus dolor purus",
-          "Aliquam sem et tortor consequat",
-          "Pellentesque dignissim enim sit",
-          "Hendrerit dolor magna eget est"
         ]
       },
       {
@@ -84,11 +76,10 @@
     ],
     "volunteer": [
       {
-        "organization": "Animal Refuge",
-        "position": "Supervisor",
-        "url": "https://example.com/",
-        "startDate": "2012-10-11",
-        "endDate": "2014-12-24",
+        "organization": "Orcasound",
+        "position": "Contributor",
+        "url": "https://www.orcasound.net/",
+        "startDate": "2023-08",
         "summary": "Nulla sit amet velit ac turpis interdum consectetur eget vitae ante. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Etiam pharetra diam et tortor bibendum laoreet.",
         "highlights": [
           "Maecenas at dictum sem",
@@ -96,28 +87,20 @@
           "Pellentesque vitae sed dolor",
           "Aliquam ut lectus ac lacus ultrices"
         ]
-      },
-      {
-        "organization": "Red cross",
-        "position": "Math professor",
-        "url": "https://example.com/",
-        "startDate": "2011-01-16",
-        "endDate": "2012-10-10",
-        "summary": "Proin id justo pulvinar, imperdiet eros ac, iaculis nunc. Donec dignissim leo volutpat, cursus arcu vel, dapibus risus. Nam ut volutpat est. In fringilla commodo pretium. Vestibulum efficitur pellentesque ex. Nulla dictum, mauris sit amet mattis pharetra, purus ipsum commodo ex, a molestie metus augue sit amet justo."
       }
     ],
     "education": [
       {
-        "institution": "University of Stanford",
-        "url": "https://www.stanford.edu/",
-        "area": "Computer Science",
-        "studyType": "Master"
+        "institution": "International Center for Automotive Research",
+        "url": "https://www.cuicar.com//",
+        "area": "Automotive Engineering",
+        "studyType": "Ph.D."
       },
       {
-        "institution": "University of Oklahoma",
-        "url": "https://www.ou.edu/",
-        "area": "Information Technology",
-        "studyType": "Bachelor"
+        "institution": "Clemson University",
+        "url": "https://www.clemson.edu/",
+        "area": "Computer Engineering",
+        "studyType": "B.S."
       }
     ],
     "awards": [
@@ -132,36 +115,32 @@
         "summary": "Obtained thanks to my contributions \n\n to the Java community."
       }
     ],
-    "certificates": [
-      {
-        "name": "AWS Certified Solutions\n\nArchitect - Professional",
-        "issuer": "Amazon Web Services",
-        "url": "https://www.your-badge.com"
-      },
-      {
-        "name": "Oracle Certified Professional\n\nJava SE 17 Developer",
-        "issuer": "Oracle",
-        "url": "https://www.your-badge.com"
-      },
-      {
-        "name": "CCNA Routing and Switching",
-        "issuer": "Cisco",
-        "url": "https://www.your-badge.com"
-      }
-    ],
+    "certificates": [],
     "publications": [
       {
-        "name": "Chasing the Higgs Boson",
-        "publisher": "The New York Times",
-        "releaseDate": "2013-03-04",
-        "url": "https://www.nytimes.com/",
-        "summary": "Integer luctus erat at sapien pharetra, nec elementum diam euismod. Maecenas condimentum eu nisi ut aliquet. Donec vitae ultricies risus. Donec commodo justo at odio cursus, nec mattis tellus dignissim."
+        "name": "An ant-inspired model for multi-agent interaction networks without stigmergy",
+        "publisher": "Springer Swarm Intelligence",
+        "releaseDate": "2017-11-13",
+        "url": "https://link.springer.com/epdf/10.1007/s11721-017-0147-4?author_access_token=Yq3Igpf5Jzr6E6zM6x4FGve4RwlQNchNByi7wbcMAY5mCgzjaXtPzkevknds0UBZVHwICGHsKaPhfA2DgMnw2vjpwQxP3zU7mKgQZtKYTrnscLgSh_6XmRCEY0SqnFyekBhuP34ZHy-tI4BFdSif3w==",
       },
       {
-        "name": "Clean Code: A Handbook of Agile Software Craftsmanship",
-        "publisher": "Pearson",
-        "releaseDate": "2008-08-01",
-        "summary": "Morbi lobortis sodales nisi, et vulputate diam posuere vitae. Phasellus sollicitudin vehicula justo vel tincidunt. Donec faucibus magna ut sollicitudin tincidunt. Etiam sodales neque eu mollis egestas. Nam nisl nulla, iaculis sit amet condimentum quis, iaculis ut ex. Donec gravida efficitur ligula, ac auctor magna efficitur vel."
+        "name": "Dash Designer: A Multi-Modal Design Tool for Vehicle Interactivity",
+        "publisher": "AutomotiveUI '14",
+        "releaseDate": "2014-09-17",
+        "summary": "We present Dash Designer: a mixed-reality design tool for vehicle interiors. The tool consists of a tablet and projector that can be used to create and organize new interactive components for vehicle dashboards. A user can use a freehand sketching interface to draw a new interactive element on the tablet, and a simple set of gestures to motion the created item onto a real dashboard. A simple interface is provided to connect the created components to vehicle data published by an integrated driving simulator. The system is currently a work in progress, and future work will include integration with real vehicle dashboards, autonomous vehicles, and support for participatory design sessions.",
+        "url": "https://dl.acm.org/doi/10.1145/2667239.2667278"
+      },
+      {
+        "name": "Decentralized Congestion Control in Random Ant Interaction Networks",
+        "publisher": "Springer",
+        "releaseDate": "2017-06-17",
+        "url": "https://link.springer.com/chapter/10.1007/978-3-319-61824-1_29"
+      },
+      {
+        "name": "Decentralized traffic rerouting using minimalist communications",
+        "publisher": "IEEE",
+        "releaseDate": "2018-02-15",
+        "url": "https://link.springer.com/chapter/10.1007/978-3-319-61824-1_29"
       }
     ],
     "skills": [
@@ -208,11 +187,11 @@
     "languages": [
       {
         "language": "English",
-        "fluency": "Native"
+        "fluency": "Fluent"
       },
       {
-        "language": "Russian",
-        "fluency": "Professional"
+        "language": "German",
+        "fluency": "Native"
       }
     ],
     "interests": [
@@ -229,20 +208,7 @@
         "name": "Writing"
       }
     ],
-    "references": [
-      {
-        "name": "Robert C. Martin",
-        "reference": "Suspendisse a tristique massa. Curabitur sollicitudin volutpat urna, sed pretium justo tincidunt non."
-      },
-      {
-        "name": "Martin Fowler",
-        "reference": "Integer luctus erat at sapien pharetra, nec elementum diam euismod. Maecenas condimentum eu nisi ut aliquet. Donec vitae ultricies risus. Donec commodo justo at odio cursus, nec mattis tellus dignissim."
-      },
-      {
-        "name": "Elon Musk",
-        "reference": "Sed pretium urna orci, at mollis ante fermentum at. Donec sagittis risus hendrerit venenatis consequat."
-      }
-    ],
+    "references": [],
     "projects": [
       {
         "name": "Deno",
