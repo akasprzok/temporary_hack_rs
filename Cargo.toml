@@ -4,5 +4,5 @@ version = "0.1.0"
 edition = "2021"
 
 [workspace]
-members = ["frontend", "backend", "common"]
+members = ["frontend", "backend", "common", "tui"]
 default-members = ["backend"]
